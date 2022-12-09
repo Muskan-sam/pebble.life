@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import 'Registeration.dart';
+import 'package:pebble_life/Registeration.dart';
+import 'package:pebble_life/login.dart';
 
 class Home extends StatelessWidget {
   const Home({Key? key}) : super(key: key);
@@ -11,7 +12,6 @@ class Home extends StatelessWidget {
     return Scaffold(
       body: Container(
         width: double.infinity,
-        height: double.infinity,
         decoration: BoxDecoration(
           color: Colors.white,
         ),
@@ -37,7 +37,6 @@ class Home extends StatelessWidget {
               Image.asset('assets/images/getstarted.png',
               ),
             ),
-            //header text
             Container(
               margin:  EdgeInsets.fromLTRB(0, 0, 0, 25),
               width:  double.infinity,
@@ -48,7 +47,7 @@ class Home extends StatelessWidget {
                   Center(
                     child:
                     Container(
-                      margin:  EdgeInsets.fromLTRB(0, 0, 0, 2),
+                      margin:  EdgeInsets.fromLTRB(0, 0, 0, 8),
                       child:
                       RichText(
                         textAlign: TextAlign.center,
@@ -91,6 +90,8 @@ class Home extends StatelessWidget {
 
                           ]
                         ),
+
+
                       ),
                     ),
                   ),
@@ -112,14 +113,14 @@ class Home extends StatelessWidget {
                         ),
                       ),
                     ),
-                  )
+                  ),
                 ],
               ),
             ),
             //logo
             Container(
               // iconFcq (1:156)
-              margin: EdgeInsets.only(left: 226, bottom: 30),
+                margin: EdgeInsets.only(left: 226, bottom: 30),
                 width:  double.infinity,
                 decoration:  BoxDecoration (
                   borderRadius:  BorderRadius.circular(18),
@@ -168,34 +169,37 @@ class Home extends StatelessWidget {
             ),
             Container(
               margin:  EdgeInsets.fromLTRB(56.5, 0, 58.5, 0),
-                child:
-                Center(
+              child:
+              Center(
+                  child:
+                  SizedBox(
+                    width: 225,
+                    height: 60,
                     child:
-                    SizedBox(
-                      width: 225,
-                      height: 60,
-                      child:
-                      ElevatedButton(
-                        onPressed: () {},
-                        // onPressed: () => Navigator.of(context)
-                        //  .push(MaterialPageRoute(builder: (context) => const Register())),
-                        child: Text('Get Started'),
-                        style: ElevatedButton.styleFrom(
-                          shape: StadiumBorder(),
-                          backgroundColor: Color(0xff74369a),
-                          textStyle: const TextStyle(
-                              color: Colors.white,
-                              fontSize: 25,
-                              fontStyle: FontStyle.normal),
-                        ),
+                    ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => const Register()),
+                        );
+                      },
+
+                      child: Text('Get Started'),
+                      style: ElevatedButton.styleFrom(
+                        shape: StadiumBorder(),
+                        backgroundColor: Color(0xff74369a),
+                        textStyle: const TextStyle(
+                            color: Colors.white,
+                            fontSize: 25,
+                            fontStyle: FontStyle.normal),
                       ),
-                    )
-                ),
+                    ),
+                  )
+              ),
             ),
             Container(
               margin:  EdgeInsets.only(left: 100),
-              width:  double.infinity,
-              height: double.infinity,
+              height: 75,
               child:
               Row(
                 crossAxisAlignment:  CrossAxisAlignment.center,
@@ -217,23 +221,27 @@ class Home extends StatelessWidget {
                     ),
                   ),
                   Center(
-                    child:
-                    TextButton(
-                      style: TextButton.styleFrom(
-                        foregroundColor: Color(0xffe94560),
-                      ),
-                      onPressed: () {  },
-                      child: Text('Login',
-                          style: GoogleFonts.poppins(
-                              fontSize: 16,
-                          fontWeight: FontWeight.w700))
+                      child:
+                      TextButton(
+                          style: TextButton.styleFrom(
+                            foregroundColor: Color(0xffe94560),
+                          ),
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) => const login()),
+                            );
+                          },
+                          child: Text('Login',
+                              style: GoogleFonts.poppins(
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w700))
 
-                    )
+                      )
                   ),
                 ],
               ),
             ),
-
           ],
         ),
       ),
