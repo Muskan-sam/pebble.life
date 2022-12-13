@@ -3,6 +3,8 @@ import 'package:google_fonts/google_fonts.dart';
 
 import 'package:pebble_life/login.dart';
 
+import 'connect_with.dart';
+
 class Register extends StatefulWidget {
   const Register({Key? key}) : super(key: key);
 
@@ -18,7 +20,8 @@ class _RegisterState extends State<Register> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        width: double.infinity,
+        height: MediaQuery.of(context).size.height,
+        width: MediaQuery.of(context).size.width,
         decoration: BoxDecoration(
           color: Colors.white,
         ),
@@ -204,14 +207,14 @@ class _RegisterState extends State<Register> {
                     width: 225,
                     height: 60,
                     child:
-                    ElevatedButton(
+                    ElevatedButton.icon(
                       onPressed: () {
-                        // Navigator.push(
-                        //   context,
-                        //   MaterialPageRoute(builder: (context) => const Home()),
-                        // );
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => const connectWith()),
+                        );
                       },
-                      child: Text(''),
+                      icon: Image.asset('assets/images/icon_button.png'),
                       style: ElevatedButton.styleFrom(
                         shape: StadiumBorder(),
                         backgroundColor: Color(0xff74369a),
@@ -219,7 +222,7 @@ class _RegisterState extends State<Register> {
                             color: Colors.white,
                             fontSize: 25,
                             fontStyle: FontStyle.normal),
-                      ),
+                      ), label: Text(''),
                     ),
                   )
               ),

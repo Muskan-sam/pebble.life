@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:pebble_life/get_started.dart';
 
 import 'Registeration.dart';
+import 'connect_with.dart';
 
 class login extends StatefulWidget {
   const login({Key? key}) : super(key: key);
@@ -19,7 +20,8 @@ class _loginState extends State<login> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        width: double.infinity,
+        height: MediaQuery.of(context).size.height,
+        width: MediaQuery.of(context).size.width,
         decoration: BoxDecoration(
           color: Colors.white,
         ),
@@ -133,7 +135,7 @@ class _loginState extends State<login> {
                       onPressed: () {
                         // Navigator.push(
                         //   context,
-                        //   MaterialPageRoute(builder: (context) => const Home()),
+                        //   MaterialPageRoute(builder: (context) => const home()),
                         // );
                       },
                       child: Text('Login'),
@@ -199,14 +201,14 @@ class _loginState extends State<login> {
                     width: 225,
                     height: 60,
                     child:
-                    ElevatedButton(
+                    ElevatedButton.icon(
                       onPressed: () {
-                        // Navigator.push(
-                        //   context,
-                        //   MaterialPageRoute(builder: (context) => const Home()),
-                        // );
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => const connectWith()),
+                        );
                       },
-                      child: Text(''),
+                      icon: Image.asset('assets/images/icon_button.png'),
                       style: ElevatedButton.styleFrom(
                         shape: StadiumBorder(),
                         backgroundColor: Color(0xff74369a),
@@ -214,7 +216,7 @@ class _loginState extends State<login> {
                             color: Colors.white,
                             fontSize: 25,
                             fontStyle: FontStyle.normal),
-                      ),
+                      ), label: Text(''),
                     ),
                   )
               ),
