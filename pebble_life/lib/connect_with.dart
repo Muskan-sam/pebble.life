@@ -4,6 +4,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:intl_phone_number_input/intl_phone_number_input.dart';
 import 'package:flutter_signin_button/flutter_signin_button.dart';
 
+import 'login.dart';
+
 
 class connectWith extends StatefulWidget {
   const connectWith({Key? key}) : super(key: key);
@@ -110,11 +112,33 @@ class _connectWithState extends State<connectWith> {
                             onPressed: (){},
                           ),
 
+                          Row(
+
+                            children: <Widget>[
+                              const Text('Already have an account?'),
+                              TextButton(
+                                child: const Text(
+                                  'Login',
+                                  style: TextStyle(fontSize: 20,
+                                    color:  Color(0xffe94560), ),
+                                ),
+                                onPressed: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(builder: (context) => const login()),
+                                  );
+                                },
+                              )
+                            ],
+                            mainAxisAlignment: MainAxisAlignment.center,
+                          ),
+
+
 
                         ],
                       ),
                     ),
-                  ))
+                  )),
             ],
           ),
 

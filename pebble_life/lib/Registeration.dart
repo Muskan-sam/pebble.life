@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:pebble_life/Profile/Profile_page1.dart';
 
 import 'package:pebble_life/login.dart';
 
@@ -139,10 +140,10 @@ class _RegisterState extends State<Register> {
                     child:
                     ElevatedButton(
                       onPressed: () {
-                        // Navigator.push(
-                        //   context,
-                        //   MaterialPageRoute(builder: (context) => const Home()),
-                        // );
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => const profile_main()),
+                        );
                       },
                       child: Text('Register'),
                       style: ElevatedButton.styleFrom(
