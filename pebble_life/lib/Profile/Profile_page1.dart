@@ -214,8 +214,18 @@ class _profile_mainState extends State<profile_main> {
                       margin: EdgeInsets.only(bottom: 20),
 
 
-                      child: DropdownButton<String>(
+                      child: DropdownButtonFormField<String>(
                         value: _chosenValue,
+                        decoration: InputDecoration(filled: true,
+                          fillColor: Color(0xfff8edff),
+                          enabledBorder: OutlineInputBorder(
+                              borderSide: BorderSide(width: 2,
+                                color: Color(0xff74369a),),
+                              borderRadius: BorderRadius.all(Radius.circular(10),)
+                          )
+
+
+                          ),
                         style: TextStyle(
                           color: Color(0xff74369a),
                         ),
@@ -246,27 +256,6 @@ class _profile_mainState extends State<profile_main> {
                         },
                       ),
 
-                    ),
-                    Container(
-                      alignment: Alignment.center,
-                      margin: EdgeInsets.fromLTRB(0, 20, 0, 10),
-                      child: ToggleSwitch(
-                        minWidth: 180,
-                        minHeight: 50,
-                        initialLabelIndex: 1,
-                        cornerRadius: 50.0,
-                        activeFgColor: Colors.white,
-                        inactiveBgColor: Colors.white,
-                        borderColor: [Color(0xff74369a)],
-                        inactiveFgColor: Color(0xff74369a),
-                        totalSwitches: 2,
-                        labels: ['Doctor', 'Patient'],
-                        fontSize: 25,
-                        activeBgColor: [Color(0xff74369a)],
-                        onToggle: (index) {
-                          print('switched to: $index');
-                        },
-                      ),
                     ),
 
                     Container(
