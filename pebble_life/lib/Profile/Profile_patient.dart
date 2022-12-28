@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
+import 'package:pebble_life/MainScreens/Dashboard.dart';
 import 'package:toggle_switch/toggle_switch.dart';
 
 import 'dart:async';
@@ -191,7 +192,7 @@ class _profile_patientState extends State<profile_patient> {
                           onPressed: () {
                             Navigator.push(
                               context,
-                              MaterialPageRoute(builder: (context) => const profile_patient()),
+                              MaterialPageRoute(builder: (context) => const dashboard()),
                             );
                           },
                           child: Text('Next'),

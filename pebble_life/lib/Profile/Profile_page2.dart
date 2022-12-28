@@ -86,7 +86,7 @@ class _profile_subState extends State<profile_sub> {
                 child: ToggleSwitch(
                   minWidth: 180,
                   minHeight: 50,
-                  initialLabelIndex: 1,
+                  initialLabelIndex: 0,
                   cornerRadius: 50.0,
                   activeFgColor: Colors.white,
                   inactiveBgColor: Colors.white,
