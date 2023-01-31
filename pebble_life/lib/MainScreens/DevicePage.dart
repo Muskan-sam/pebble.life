@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'dart:async';
 
+import 'Profile_display.dart';
+
 class device_page extends StatefulWidget {
   const device_page({Key? key}) : super(key: key);
 
@@ -41,7 +43,12 @@ class _device_pageState extends State<device_page> {
                       ),
                     ),
                     GestureDetector(
-                      onTap: (){ },
+                      onTap: (){
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => const ProfileDispaly()),
+                        );
+                      },
                       child: Container(
                         padding: EdgeInsets.all(12),
                         decoration: BoxDecoration(

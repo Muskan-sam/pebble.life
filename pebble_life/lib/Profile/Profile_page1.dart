@@ -243,7 +243,7 @@ class _profile_mainState extends State<profile_main> {
                           );
                         }).toList(),
                         hint: Text(
-                          "Please choose a langauage",
+                          "Gender",
                           style: TextStyle(
                               color: Color(0xff74369a),
                               fontSize: 16,
